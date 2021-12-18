@@ -1,0 +1,552 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!--        <template id="pos_order_receipt_pdf_template_doc">-->
+        <!--            <t t-call="web.basic_layout">-->
+        <!--                <t t-foreach="docs" t-as="o">-->
+        <!--                    <t t-set="o" t-value="o.with_context(lang='en_US')"/>-->
+        <!--                    <div class="page" style="font-size:70px; ">-->
+        <!--                        <div style="text-align:center;">-->
+        <!--                            <t t-if='o.company_id.logo'>-->
+        <!--                                <img t-att-src="'/logo.png?company=%s' % (o.company_id.id or 0)"-->
+        <!--                                     style="padding: 0px; margin: 0px; height: auto; max-width: 200px; max-height: 100px;"-->
+        <!--                                     t-att-alt="'%s' % o.company_id.name"/>-->
+        <!--                            </t>-->
+
+        <!--                        </div>-->
+
+        <!--                    </div>-->
+        <!--                </t>-->
+
+
+        <!--                <center>-->
+        <!--                    <span t-set="company" t-value="o.company_id"/>-->
+        <!--                    <div style="margin:0 auto;padding:0 auto;white-space:nowrap; margin-top: 2pt">-->
+        <!--                        <div>-->
+        <!--                            <span t-esc="company.name"/>-->
+        <!--                            <br/>-->
+        <!--                            <t t-if="company.phone">-->
+        <!--                                Phone:-->
+        <!--                                <span t-esc="company.phone"/>-->
+        <!--                                <br/>-->
+        <!--                            </t>-->
+        <!--                            <t t-if="company.street">-->
+
+        <!--                                <span t-esc="company.street"/>-->
+        <!--                                <br/>-->
+        <!--                            </t>-->
+        <!--                            <t t-if="company.website">-->
+
+        <!--                                <span t-esc="company.website"/>-->
+        <!--                                <br/>-->
+        <!--                            </t>-->
+        <!--                            <t t-if="company.vat">-->
+        <!--                                TAX ID:-->
+        <!--                                <span t-esc="company.vat"/>-->
+        <!--                                <br/>-->
+        <!--                            </t>-->
+        <!--                            <div>&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;</div>-->
+        <!--                        </div>-->
+        <!--                    </div>-->
+        <!--                </center>-->
+
+        <!--                <div class="page" style="font-size:15px;">-->
+
+        <!--                    <br></br>-->
+        <!--                    <div style="width:47%;float:left;white-space:nowrap">-->
+        <!--                        <table>-->
+        <!--                            <tr>-->
+        <!--                                <td><b>Date:</b></td>-->
+        <!--                                <td><b><span t-field="o.date_order" style="font-size: large"/></b></td>-->
+        <!--                                <td><b>:التاريخ </b></td>-->
+        <!--                            </tr>-->
+        <!--                        </table>-->
+
+
+        <!--                    </div>-->
+        <!--                    <br/>-->
+        <!--                    <br/>-->
+        <!--                    <div style="width:53%;float:left; white-space:nowrap">-->
+
+        <!--                        <b>Invoice NO:</b>-->
+        <!--                        <span t-field="o.pos_reference" style="font-size: large"/>-->
+        <!--                        <b>:رقم الفاتورة</b>-->
+        <!--                    </div>-->
+        <!--                    <br/>-->
+        <!--                    <br/>-->
+
+        <!--                    <span t-set="company" t-value="o.company_id"/>-->
+        <!--                    <div style="margin:0 auto;padding:0 auto;white-space:nowrap;float:left">-->
+        <!--                        <div>-->
+        <!--                            <t t-if="o.user_id">-->
+        <!--                                <b>User:</b>-->
+        <!--                                <span t-field="o.user_id" style="font-size: large"/><b>:المستخدم</b>-->
+        <!--                                <br/>-->
+        <!--                            </t>-->
+        <!--                            <br/>-->
+        <!--                            <t t-if="o.partner_id">-->
+        <!--                               <b>Customer:</b>-->
+        <!--                                <span t-field="o.partner_id" style="font-size: large"/> <b>:العميل</b>-->
+        <!--                                <br/>-->
+        <!--                            </t>-->
+        <!--                            <br/>-->
+        <!--                            <t t-if="o.partner_id.vat">-->
+        <!--                                <b>VAT NO:</b><span t-field="o.partner_id.vat" style="font-size: large"/><b>:الرقم الضريبي</b>-->
+        <!--                                <br/>-->
+        <!--                            </t>-->
+        <!--                            &lt;!&ndash;                            <t t-if="o.branch_id">&ndash;&gt;-->
+        <!--                            &lt;!&ndash;                                <table>&ndash;&gt;-->
+        <!--                            &lt;!&ndash;                                    <tr>&ndash;&gt;-->
+        <!--                            &lt;!&ndash;                                        <td>Branch:</td>&ndash;&gt;-->
+        <!--                            &lt;!&ndash;                                        <td><span t-field="o.branch_id.name"/></td>&ndash;&gt;-->
+        <!--                            &lt;!&ndash;                                        <td>:الفرع</td>&ndash;&gt;-->
+        <!--                            &lt;!&ndash;                                    </tr>&ndash;&gt;-->
+        <!--                            &lt;!&ndash;                                </table>&ndash;&gt;-->
+        <!--                            &lt;!&ndash;                            </t>&ndash;&gt;-->
+        <!--                        </div>-->
+        <!--                    </div>-->
+        <!--                    <br/>-->
+
+        <!--                    <table width="100%"-->
+        <!--                           style="border-collapse:separate;border-spacing:0 4px;">-->
+        <!--                        <tr style="text-decoration:underline ; font-size: 2 pt">-->
+        <!--                            <th>Desc-->
+        <!--                                <br/>-->
+        <!--                                الوصف-->
+        <!--                            </th>-->
+        <!--                            <th>Qty<br/>الكميه-->
+        <!--                            </th>-->
+        <!--                            <th class="text-right">price-->
+        <!--                                <br/>-->
+        <!--                                السعر-->
+        <!--                            </th>-->
+        <!--                            <th class="text-right">subtotal-->
+        <!--                                <br/>-->
+        <!--                                الاجمالي-->
+        <!--                            </th>-->
+        <!--                        </tr>-->
+        <!--                        <tr t-foreach="o.lines" t-as="line">-->
+        <!--                            <td style="width:25%">-->
+        <!--                                <span-->
+        <!--                                        t-field="line.with_context(display_default_code=False).product_id"/>-->
+        <!--                                <div t-if="line.discount > 0">-->
+        <!--                                    <i style="font-weight:italic light !important;color:grey">-->
+        <!--                                        With a-->
+        <!--                                        <t t-esc="line.discount"/>-->
+        <!--                                        % discount-->
+        <!--                                    </i>-->
+        <!--                                </div>-->
+        <!--                            </td>-->
+        <!--                            <td style="width:25%">-->
+        <!--                                <span t-field="line.qty"/>-->
+        <!--                                <span t-field="line.product_id.uom_id"/>-->
+        <!--                            </td>-->
+        <!--                            <td class="text-right" style="width:22%">-->
+        <!--                                <span t-field="line.price_unit"-->
+        <!--                                      t-options="{'widget': 'monetary', 'display_currency': o.config_id.currency_id}"/>-->
+        <!--                            </td>-->
+        <!--                            <td class="text-right" style="width:25% ">-->
+        <!--                                <span t-field="line.price_subtotal"-->
+        <!--                                      t-options="{'widget': 'monetary', 'display_currency': o.config_id.currency_id}"/>-->
+        <!--                            </td>-->
+        <!--                        </tr>-->
+        <!--                    </table>-->
+        <!--                    <table width="100%"-->
+        <!--                           style="border-collapse:separate;border-spacing:0px;margin-top:4px;">-->
+        <!--                        <tr>-->
+        <!--                            <td style="width:75%">Subtotal:</td>-->
+        <!--                            <td style="width:25%" class="text-center">-->
+        <!--                                <span t-esc="o.account_move.amount_untaxed"-->
+        <!--                                      t-options="{'widget': 'monetary', 'display_currency': o.config_id.currency_id}"/>-->
+        <!--                            </td>-->
+        <!--                            <td style="white-space:nowrap">:الاجمالي الفرعي</td>-->
+        <!--                        </tr>-->
+        <!--                        <tr t-foreach="o.get_order_tax_value_in_receipt()"-->
+        <!--                            t-as="taxdetail">-->
+        <!--                            <td>-->
+        <!--                                <span t-esc="taxdetail"/>-->
+        <!--                            </td>-->
+        <!--                            <td class="text-right">-->
+        <!--                                <span t-esc="taxdetail_value"-->
+        <!--                                      t-options="{'widget': 'monetary', 'display_currency': o.config_id.currency_id}"/>-->
+        <!--                            </td>-->
+        <!--                        </tr>-->
+        <!--                        <tr t-if="o.get_total_discount_in_receipt() > 0.0">-->
+        <!--                            <td>Discount:</td>-->
+        <!--                            <td class="text-right">-->
+        <!--                                <span t-esc="o.get_total_discount_in_receipt()"-->
+        <!--                                      t-options="{'widget': 'monetary', 'display_currency': o.config_id.currency_id}"/>-->
+        <!--                            </td>-->
+        <!--                        </tr>-->
+        <!--                        <tr style="font-size:17px">-->
+        <!--                            <td>Net Amount:</td>-->
+        <!--                            <td class="text-center">-->
+        <!--                                <span t-field="o.amount_total"-->
+        <!--                                      t-options="{'widget': 'monetary', 'display_currency': o.config_id.currency_id}"/>-->
+        <!--                            </td>-->
+        <!--                            <td style="white-space:nowrap">:الصافي</td>-->
+        <!--                        </tr>-->
+        <!--                        <tr style="font-size:17px">-->
+        <!--                            <td>Vat Amount:</td>-->
+        <!--                            <td class="text-center">-->
+        <!--                                <span t-field="o.amount_tax"-->
+        <!--                                      t-options="{'widget': 'monetary', 'display_currency': o.config_id.currency_id}"/>-->
+        <!--                            </td>-->
+        <!--                            <td style="white-space:nowrap">:الضريبة</td>-->
+        <!--                        </tr>-->
+        <!--                        <tr>-->
+        <!--                            <td colspan="2">-->
+        <!--                                <strong>Amount in Words:</strong>-->
+        <!--                                <br/>-->
+        <!--                                &lt;!&ndash;                                <span t-esc="o.config_id.currency_id.amount_to_text(o.amount_total)"/>&ndash;&gt;-->
+        <!--                                <span t-esc="o._amount_to_words(o.amount_total)"/>-->
+        <!--                                <br/>-->
+        <!--                                <span t-esc="o._arabic_amount_to_words(o.amount_total)"></span>-->
+        <!--                            </td>-->
+        <!--                            &lt;!&ndash;                            <td>:التفقيط</td>&ndash;&gt;-->
+        <!--                        </tr>-->
+        <!--                    </table>-->
+        <!--                    <table width="100%"-->
+        <!--                           style="border-collapse:separate;border-spacing:0 4px;">-->
+        <!--                        <tr-->
+        <!--                                t-foreach="o.payment_ids.filtered(lambda l: l.amount &gt; 0)"-->
+        <!--                                t-as="line">-->
+        <!--                            <td style="width:75%">-->
+        <!--                                <span t-field="line.payment_method_id"/>-->
+        <!--                            </td>-->
+        <!--                            <td style="width:25%" class="text-right">-->
+        <!--                                <span t-esc="line.amount"-->
+        <!--                                      t-options="{'widget': 'monetary', 'display_currency': o.config_id.currency_id}"/>-->
+        <!--                            </td>-->
+        <!--                        </tr>-->
+        <!--                        <tr>-->
+        <!--                            <td style="padding-top:3px;">Change:-->
+        <!--                                <br/>-->
+        <!--                                <b>المتبقي</b>-->
+        <!--                            </td>-->
+        <!--                            <td style="padding-top:3px;" class="text-right">-->
+        <!--                                <span t-esc="abs(o.amount_return)"-->
+        <!--                                      t-options="{'widget': 'monetary', 'display_currency': o.config_id.currency_id}"/>-->
+        <!--                            </td>-->
+        <!--                        </tr>-->
+        <!--                    </table>-->
+        <!--                    <center>-->
+        <!--                        <span id="qr_img" class="span_splitter">-->
+        <!--                            <img t-if="o.account_move.l10n_sa_qr_code_str"-->
+        <!--                                 t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s'%('QR', o.account_move.l10n_sa_qr_code_str, 150, 150)"/>-->
+        <!--                        </span>-->
+        <!--                    </center>-->
+
+
+        <!--                    <t t-if="o.config_id.receipt_footer">-->
+        <!--                        <br/>-->
+        <!--                        <div style='text-align:center'>-->
+        <!--                            <t t-esc="o.config_id.receipt_footer"/>-->
+        <!--                        </div>-->
+        <!--                    </t>-->
+        <!--                    <br/>-->
+
+        <!--                </div>-->
+        <!--            </t>-->
+
+        <!--        </template>-->
+        <template id="pos_order_receipt_pdf_template_doc">
+            <t t-call="web.basic_layout">
+                <t t-foreach="docs" t-as="o">
+                    <t t-set="o" t-value="o.with_context(lang='en_US')"/>
+                    <div class="page" style="font-size:25px; ">
+                        <div style="text-align:center;">
+                            <t t-if='o.company_id.logo'>
+                                <img t-att-src="'/logo.png?company=%s' % (o.company_id.id or 0)"
+                                     style="padding: 0px; margin: 0px; height: auto; max-width: 200px; max-height: 50px;"
+                                     t-att-alt="'%s' % o.company_id.name"/>
+                            </t>
+
+                        </div>
+
+                    </div>
+                </t>
+
+
+                <center>
+                    <span t-set="company" t-value="o.company_id"/>
+                    <div style="margin:0 auto;padding:0 auto;white-space:nowrap; margin-top: 1pt">
+                        <div>
+                            <span t-esc="company.name"/>
+                            <br/>
+                            <t t-if="company.phone">
+                                Phone:
+                                <span t-esc="company.phone"/>
+                                <br/>
+                            </t>
+                            <t t-if="company.street">
+
+                                <span t-esc="company.street"/>
+                                <br/>
+                            </t>
+                            <t t-if="company.website">
+
+                                <span t-esc="company.website"/>
+                                <br/>
+                            </t>
+                            <t t-if="company.vat">
+                                TAX ID:
+                                <span t-esc="company.vat"/>
+                                <br/>
+                            </t>
+                            <div>----------------------------------</div>
+                        </div>
+                    </div>
+                </center>
+
+                <div class="page" style="font-size:10px;">
+
+                    <br></br>
+                    <div style="width:47%;float:left;white-space:nowrap">
+                        <table style="line-height:5pt">
+                            <tr>
+                                <td>
+                                    <b>Date:</b>
+                                </td>
+                                <td>
+                                    <b>
+                                        <span t-field="o.invoice_datetime"/>
+                                    </b>
+                                </td>
+                                <td>
+                                    <b>:التاريخ</b>
+                                </td>
+                            </tr>
+                        </table>
+
+
+                    </div>
+                    <br/>
+                    <!--                    <br/>-->
+                    <div style="width:53%;float:left; white-space:nowrap">
+
+                        <b>Invoice NO:</b>
+                        <span t-field="o.name"/>
+                        <b>:رقم الفاتورة</b>
+                    </div>
+                    <br style="line-height:5pt"/>
+                    <!--                    <br/>-->
+
+                    <!--                    <span t-set="company" t-value="o.company_id"/>-->
+                    <!--                    <div style="margin:0 auto;padding:0 auto;white-space:nowrap;float:left">-->
+                    <div>
+                        <div style="width:80%; font-size:10px">
+                            <t t-if="o.partner_id">
+                                <table>
+                                    <tr style="width:50%; font-size:10px">
+                                        <td>
+                                            <b>Customer:</b>
+
+                                        </td>
+                                        <td>
+                                            <span t-field="o.partner_id" style="white-space:nowrap;font-size:10px"/>
+                                        </td>
+                                        <td>
+                                            <b>:العميل</b>
+                                        </td>
+                                    </tr>
+                                </table>
+
+
+                            </t>
+                            <!--                            <br/>-->
+                            <t t-if="o.partner_id.vat">
+                                <b>VAT NO:</b>
+                                <span t-field="o.partner_id.vat"/>
+                                <b>:الرقم الضريبي</b>
+                                <br/>
+                            </t>
+                            <!--                            <t t-if="o.branch_id">-->
+                            <!--                                <table>-->
+                            <!--                                    <tr>-->
+                            <!--                                        <td>Branch:</td>-->
+                            <!--                                        <td><span t-field="o.branch_id.name"/></td>-->
+                            <!--                                        <td>:الفرع</td>-->
+                            <!--                                    </tr>-->
+                            <!--                                </table>-->
+                            <!--                            </t>-->
+                        </div>
+                    </div>
+                    <br/>
+                    <br/>
+
+                    <table width="100%"
+                           style="border-collapse:separate;border-spacing:0 4px;">
+                        <tr style="text-decoration:underline ; font-size: 2 pt">
+                            <th>ITEM
+                                <br/>
+                                الصنف
+                            </th>
+                            <th class="text-right">Qty<br/>الكميه
+                            </th>
+                            <th class="text-right">price
+                                <br/>
+                                السعر
+                            </th>
+                            <th class="text-center">subtotal
+                                <br/>
+                                الاجمالي
+                            </th>
+                        </tr>
+                        <tr t-foreach="o.invoice_line_ids" t-as="line">
+                            <td style="width:36%; font-size:7px">
+                                <span t-field="line.with_context(lang='ar_001').product_id.name"
+                                      t-options="{'widget': 'text'}"/>
+                                <div t-if="line.discount > 0">
+                                    <t t-if="line.product_id.name != line.with_context(lang='ar_001').name">
+                                        <br/>
+                                        <span t-field="line.with_context(lang='ar_001').name"
+                                              t-options="{'widget': 'text'}"/>
+
+                                    </t>
+                                </div>
+                            </td>
+                            <!--                                                        <t t-if="not line.display_type" name="account_invoice_line_accountable">-->
+                            <!--                                                                <td name="account_invoice_line_name">-->
+                            <!--                                                                    <span t-field="line.product_id.name" t-options="{'widget': 'text'}"/>-->
+                            <!--                                                                    <t t-if="line.product_id.name != line.with_context(lang='ar_001').product_id.name">-->
+                            <!--                                                                        <br/>-->
+                            <!--                                                                        <span t-field="line.with_context(lang='ar_001').product_id.name" t-options="{'widget': 'text'}"/>-->
+                            <!--                                                                    </t>-->
+                            <!--                                                                </td>-->
+                            <td class="text-right" style="width:17%; font-size:9px">
+                                <span t-field="line.quantity"/>
+                                <span t-field="line.product_id.uom_id"/>
+                            </td>
+                            <td class="text-right" style="width:17%; font-size:9px">
+                                <span t-field="line.price_unit"
+                                      t-options="{'widget': 'monetary', 'display_currency': o.currency_id}"/>
+                            </td>
+                            <td class="text-center" style="width:26%; font-size:9px">
+                                <span t-field="line.price_subtotal"
+                                      t-options="{'widget': 'monetary', 'display_currency': o.currency_id}"/>
+                            </td>
+                        </tr>
+                    </table>
+                    <table width="95%"
+                           style="border-collapse:separate;border-spacing:0px;margin-top:4px;">
+                        <tr style="font-size:17px">
+                            <td style="width:75%; white-space:nowrap; font-size:10px">Subtotal:</td>
+                            <td style="width:25%; font-size:10px" class="text-center">
+                                <span t-esc="o.amount_untaxed"
+                                      t-options="{'widget': 'monetary', 'display_currency': o.currency_id}"/>
+                            </td>
+                            <td style="white-space:nowrap; font-size:10px">:الاجمالي قبل الضريبة</td>
+                        </tr>
+                        <!--                        <tr t-foreach="o.get_order_tax_value_in_receipt()"-->
+                        <!--                            t-as="taxdetail">-->
+                        <!--                            <td>-->
+                        <!--                                <span t-esc="taxdetail"/>-->
+                        <!--                            </td>-->
+                        <!--                            <td class="text-right">-->
+                        <!--                                <span t-esc="taxdetail_value"-->
+                        <!--                                      t-options="{'widget': 'monetary', 'display_currency': o.currency_id}"/>-->
+                        <!--                            </td>-->
+                        <!--                        </tr>-->
+                        <tr t-if="o.get_total_discount_in_receipt() > 0.0">
+                            <td>Discount:</td>
+                            <td class="text-right">
+                                <span t-esc="o.get_total_discount_in_receipt()"
+                                      t-options="{'widget': 'monetary', 'display_currency': o.currency_id}"/>
+                            </td>
+                        </tr>
+
+                        <tr style="font-size:17px; width=95%">
+                            <td style="white-space:nowrap; font-size:10px">Vat Amount:</td>
+                            <td class="text-center" style="white-space:nowrap; font-size:10px">
+                                <span t-field="o.amount_tax"
+                                      t-options="{'widget': 'monetary', 'display_currency': o.currency_id}"/>
+                            </td>
+                            <td style="white-space:nowrap; font-size:10px ">:مبلغ الضريبة</td>
+                        </tr>
+                        <tr style="font-size:17px; white-space:nowrap; width=95%">
+                            <td style="white-space:nowrap; font-size:10px">Net Amount:</td>
+                            <td class="text-center" style="white-space:nowrap; font-size:10px">
+                                <span t-field="o.amount_total"
+                                      t-options="{'widget': 'monetary', 'display_currency': o.currency_id}"/>
+                            </td>
+                            <td style="white-space:nowrap; font-size:10px">:الاجمالي شامل الضريبة</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <!--                                <strong>Amount in Words:</strong>-->
+                                <!--                                <br/>-->
+                                <!--                                <span t-esc="o.config_id.currency_id.amount_to_text(o.amount_total)"/>-->
+                                <!--                                <span t-esc="o._amount_to_words(o.amount_total)"/>-->
+                                <!--                                <br/>-->
+                                <b>
+                                    <span t-esc="o._arabic_amount_to_words(o.amount_total)"></span>
+                                </b>
+                            </td>
+                            <!--                            <td>:التفقيط</td>-->
+                        </tr>
+                    </table>
+                    <table width="100%"
+                           style="border-collapse:separate;border-spacing:0 4px;">
+                        <tr>
+                            <!--                            <td style="width:75%">-->
+                            <!--                                <span t-field="o.invoice_payment_term_id"/>-->
+                            <!--                            </td>-->
+                            <!--                            <td style="width:25%" class="text-right">-->
+                            <!--                                &lt;!&ndash;                                <span t-esc="o.amount_residual"&ndash;&gt;-->
+                            <!--                                &lt;!&ndash;                                      t-options="{'widget': 'monetary', 'display_currency': o.currency_id}"/>&ndash;&gt;-->
+                            <!--                            </td>-->
+                        </tr>
+                        <!--                        <tr>-->
+                        <!--                            <td style="padding-top:3px;">Change:-->
+                        <!--                                <br/>-->
+                        <!--                                <b>المتبقي</b>-->
+                        <!--                            </td>-->
+                        <!--                            <td style="padding-top:3px;" class="text-right">-->
+                        <!--                                <span t-esc="abs(o.amount_total-o.amount_residual)"-->
+                        <!--                                      t-options="{'widget': 'monetary', 'display_currency': o.currency_id}"/>-->
+                        <!--                            </td>-->
+                        <!--                        </tr>-->
+                    </table>
+                    <center>
+                        <span id="qr_img" class="span_splitter">
+                            <img t-if="o.l10n_sa_qr_code_str"
+                                 t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s'%('QR', o.l10n_sa_qr_code_str, 150, 150)"/>
+                        </span>
+                    </center>
+
+
+                    <!--                    <t t-if="o.config_id.receipt_footer">-->
+                    <!--                        <br/>-->
+                    <!--                        <div style='text-align:center'>-->
+                    <!--                            <t t-esc="o.config_id.receipt_footer"/>-->
+                    <!--                        </div>-->
+                    <!--                    </t>-->
+                    <!--                    <br/>-->
+
+                </div>
+            </t>
+
+        </template>
+
+        <!--        <template id="pos_order_receipt_pdf_template">-->
+        <!--            <t t-call="web.html_container">-->
+        <!--                <t t-foreach="docs" t-as="o">-->
+        <!--                    <t t-call="eq_pos_receipt_backend.pos_order_receipt_pdf_template_doc"/>-->
+        <!--                </t>-->
+        <!--            </t>-->
+        <!--        </template>-->
+
+        <template id="invoice_receipt_pdf_template">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-set="lang" t-value="'en_US'"/>
+
+                    <t t-call="eq_pos_receipt_backend.pos_order_receipt_pdf_template_doc" t-lang="lang"/>
+                </t>
+            </t>
+        </template>
+
+    </data>
+</odoo>
