@@ -1,0 +1,477 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* sale_return_cycle
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-10-27 16:19+0000\n"
+"PO-Revision-Date: 2019-10-27 18:20+0200\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: ar\n"
+"X-Generator: Poedit 1.8.7.1\n"
+
+#. module: sale_return_cycle
+#: model:ir.model.fields,field_description:sale_return_cycle.field_sale_report_return__nbr
+msgid "# of Lines"
+msgstr "عدد البنود"
+
+#. module: sale_return_cycle
+#: model_terms:ir.ui.view,arch_db:sale_return_cycle.report_receipt_invoice_view_form
+msgid "<span style=\"font-size: small\">Branch:</span>"
+msgstr "<span style=\"font-size: small\">الفرع:</span>"
+
+#. module: sale_return_cycle
+#: model_terms:ir.ui.view,arch_db:sale_return_cycle.report_receipt_invoice_view_form
+msgid "<span style=\"font-size: small\">Cashier:</span>"
+msgstr "<span style=\"font-size: small\">كاشير:</span>"
+
+#. module: sale_return_cycle
+#: model_terms:ir.ui.view,arch_db:sale_return_cycle.report_receipt_invoice_view_form
+msgid "<span style=\"font-size: small\">Invoice</span>"
+msgstr "<span style=\"font-size: small\">فاتورة</span>"
+
+#. module: sale_return_cycle
+#: model_terms:ir.ui.view,arch_db:sale_return_cycle.report_receipt_invoice_view_form
+msgid "<span style=\"font-size: small\">Not Paid</span>"
+msgstr "<span style=\"font-size: small\">غير مدفوعة</span>"
+
+#. module: sale_return_cycle
+#: model_terms:ir.ui.view,arch_db:sale_return_cycle.report_receipt_invoice_view_form
+msgid "<span style=\"font-size: small\">Paid</span>"
+msgstr "<span style=\"font-size: small\">مدفوعة</span>"
+
+#. module: sale_return_cycle
+#: model_terms:ir.ui.view,arch_db:sale_return_cycle.report_receipt_invoice_view_form
+msgid "<span style=\"font-size: small\">Phone:</span>"
+msgstr "<span style=\"font-size: small\">تليفون:</span>"
+
+#. module: sale_return_cycle
+#: model_terms:ir.ui.view,arch_db:sale_return_cycle.report_receipt_invoice_view_form
+msgid "<span style=\"font-size: small\">State:</span>"
+msgstr "<span style=\"font-size: small\">الحالة:</span>"
+
+#. module: sale_return_cycle
+#: model_terms:ir.ui.view,arch_db:sale_return_cycle.report_receipt_invoice_view_form
+msgid "<span style=\"font-size: small\">Tax ID:</span>"
+msgstr "<span style=\"font-size: small\">سجل ضريبى:</span>"
+
+#. module: sale_return_cycle
+#: model:ir.model.fields,field_description:sale_return_cycle.field_sale_report_return__analytic_account_id
+msgid "Analytic Account"
+msgstr "الحساب التحليلي"
+
+#. module: sale_return_cycle
+#: selection:sale.report.return,state:0
+msgid "Cancelled"
+msgstr "ملغى"
+
+#. module: sale_return_cycle
+#: model:ir.model.fields,field_description:sale_return_cycle.field_sale_report_return__company_id
+#: model_terms:ir.ui.view,arch_db:sale_return_cycle.view_order_product_search
+msgid "Company"
+msgstr "المؤسسة"
+
+#. module: sale_return_cycle
+#: model:ir.model.fields,field_description:sale_return_cycle.field_sale_report_return__confirmation_date
+#: model_terms:ir.ui.view,arch_db:sale_return_cycle.view_order_product_search
+msgid "Confirmation Date"
+msgstr "تاريخ التأكيد"
+
+#. module: sale_return_cycle
+#: code:addons/sale_return_cycle/models/sale_order.py:294
+#: code:addons/sale_return_cycle/models/sale_order.py:320
+#, python-format
+msgid "Could not reserve all requested products. Please use the 'Mark as Todo' button to handle the reservation manually."
+msgstr "لا يمكن حجز جميع المنتجات المطلوبة. يرجى استخدام زر \"وضع علامة باسم تودو\" للتعامل مع الحجز يدويًا."
+
+#. module: sale_return_cycle
+#: model:ir.model.fields,field_description:sale_return_cycle.field_stock_move__created_return_sale_line_id
+msgid "Created Sale Order Line"
+msgstr "تم إنشاء خط أمر البيع"
+
+#. module: sale_return_cycle
+#: model:ir.model.fields,field_description:sale_return_cycle.field_account_invoice__return_invoice_id
+msgid "Credit Note"
+msgstr "اشعار دائن"
+
+#. module: sale_return_cycle
+#: model:ir.model.fields,field_description:sale_return_cycle.field_sale_report_return__partner_id
+#: model_terms:ir.ui.view,arch_db:sale_return_cycle.view_order_product_search
+msgid "Customer"
+msgstr "العميل"
+
+#. module: sale_return_cycle
+#: model:ir.model.fields,field_description:sale_return_cycle.field_sale_report_return__country_id
+#: model_terms:ir.ui.view,arch_db:sale_return_cycle.view_order_product_search
+msgid "Customer Country"
+msgstr "بلد العميل"
+
+#. module: sale_return_cycle
+#: model:ir.model.fields,field_description:sale_return_cycle.field_sale_report_return__commercial_partner_id
+msgid "Customer Entity"
+msgstr "كيان العميل"
+
+#. module: sale_return_cycle
+#: model_terms:ir.ui.view,arch_db:sale_return_cycle.view_order_product_search
+msgid "Date"
+msgstr "التاريخ"
+
+#. module: sale_return_cycle
+#: model:ir.model.fields,field_description:sale_return_cycle.field_sale_report_return__discount
+msgid "Discount %"
+msgstr "خصم ٪"
+
+#. module: sale_return_cycle
+#: model:ir.model.fields,field_description:sale_return_cycle.field_sale_report_return__discount_amount
+msgid "Discount Amount"
+msgstr "مقدار الخصم"
+
+#. module: sale_return_cycle
+#: model:ir.model.fields,field_description:sale_return_cycle.field_sale_report_return__display_name
+msgid "Display Name"
+msgstr "اسم العرض"
+
+#. module: sale_return_cycle
+#: model:ir.model.fields,field_description:sale_return_cycle.field_sale_order_line__return_move_dest_ids
+msgid "Downstream Moves"
+msgstr "التحركات المصب"
+
+#. module: sale_return_cycle
+#: selection:sale.report.return,state:0
+msgid "Draft Quotation"
+msgstr "مسودة فاتورة"
+
+#. module: sale_return_cycle
+#: model_terms:ir.ui.view,arch_db:sale_return_cycle.view_order_product_search
+msgid "Extended Filters"
+msgstr "الفلاتر التفصيلية"
+
+#. module: sale_return_cycle
+#: model:ir.model.fields,field_description:sale_return_cycle.field_sale_report_return__weight
+msgid "Gross Weight"
+msgstr "الوزن الإجمالي"
+
+#. module: sale_return_cycle
+#: model_terms:ir.ui.view,arch_db:sale_return_cycle.view_order_product_search
+msgid "Group By"
+msgstr "تجميع حسب"
+
+#. module: sale_return_cycle
+#: model:ir.model.fields,field_description:sale_return_cycle.field_sale_report_return__id
+msgid "ID"
+msgstr "المعرف"
+
+#. module: sale_return_cycle
+#: model:ir.model,name:sale_return_cycle.model_account_invoice
+msgid "Invoice"
+msgstr "الفاتورة"
+
+#. module: sale_return_cycle
+#: model:ir.model.fields,field_description:sale_return_cycle.field_sale_order_line__qty_invoiced
+msgid "Invoiced Quantity"
+msgstr "الكمية المفوترة"
+
+#. module: sale_return_cycle
+#: model:ir.model.fields,field_description:sale_return_cycle.field_sale_report_return____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: sale_return_cycle
+#: model:ir.model.fields,field_description:sale_return_cycle.field_sale_report_return__order_id
+msgid "Order #"
+msgstr "أمر مبيعات #"
+
+#. module: sale_return_cycle
+#: model:ir.model.fields,field_description:sale_return_cycle.field_sale_report_return__date
+#: model_terms:ir.ui.view,arch_db:sale_return_cycle.view_order_product_search
+msgid "Order Date"
+msgstr "التاريخ"
+
+#. module: sale_return_cycle
+#: model:ir.model.fields,field_description:sale_return_cycle.field_sale_report_return__name
+msgid "Order Reference"
+msgstr "مرجع الأمر"
+
+#. module: sale_return_cycle
+#: model:ir.model.fields,field_description:sale_return_cycle.field_sale_order__picking_count
+msgid "Picking count"
+msgstr "اختيار العد"
+
+#. module: sale_return_cycle
+#: model:ir.model.fields,field_description:sale_return_cycle.field_sale_report_return__pricelist_id
+msgid "Pricelist"
+msgstr "قائمه الاسعار"
+
+#. module: sale_return_cycle
+#: model_terms:ir.ui.view,arch_db:sale_return_cycle.view_account_invoice_receipt_order_negative_form
+msgid "Print Receipt"
+msgstr "اطبع الايصال"
+
+#. module: sale_return_cycle
+#: model:ir.model.fields,field_description:sale_return_cycle.field_sale_order__return_group_id
+msgid "Procurement Group"
+msgstr "مجموعه التوريدات "
+
+#. module: sale_return_cycle
+#: model:ir.model.fields,field_description:sale_return_cycle.field_sale_report_return__product_tmpl_id
+#: model_terms:ir.ui.view,arch_db:sale_return_cycle.view_order_product_search
+msgid "Product"
+msgstr "المنتج"
+
+#. module: sale_return_cycle
+#: model:ir.model.fields,field_description:sale_return_cycle.field_sale_report_return__categ_id
+#: model_terms:ir.ui.view,arch_db:sale_return_cycle.view_order_product_search
+msgid "Product Category"
+msgstr "فئة المنتج"
+
+#. module: sale_return_cycle
+#: model:ir.model.fields,field_description:sale_return_cycle.field_sale_report_return__product_id
+msgid "Product Variant"
+msgstr "تنوع للمنتج"
+
+#. module: sale_return_cycle
+#: model:ir.model.fields,field_description:sale_return_cycle.field_sale_report_return__qty_delivered
+msgid "Qty Delivered"
+msgstr "الكمية المسلّمة"
+
+#. module: sale_return_cycle
+#: model:ir.model.fields,field_description:sale_return_cycle.field_sale_report_return__qty_invoiced
+msgid "Qty Invoiced"
+msgstr "الكمية المفوترة"
+
+#. module: sale_return_cycle
+#: model:ir.model.fields,field_description:sale_return_cycle.field_sale_report_return__product_uom_qty
+msgid "Qty Ordered"
+msgstr "الكمية المطلوبة"
+
+#. module: sale_return_cycle
+#: model:ir.model.fields,field_description:sale_return_cycle.field_sale_report_return__qty_to_invoice
+msgid "Qty To Invoice"
+msgstr "الكمية للفوترة"
+
+#. module: sale_return_cycle
+#: selection:sale.report.return,state:0
+msgid "Quotation Sent"
+msgstr "تم إرسال المسودة"
+
+#. module: sale_return_cycle
+#: model_terms:ir.ui.view,arch_db:sale_return_cycle.view_order_product_search
+msgid "Quotations"
+msgstr "العروض المبدئية"
+
+#. module: sale_return_cycle
+#: model:ir.actions.report,name:sale_return_cycle.action_report_invoice_receipt
+msgid "Receipt"
+msgstr "إيصال"
+
+#. module: sale_return_cycle
+#: model_terms:ir.ui.view,arch_db:sale_return_cycle.view_sale_order_receipt_order_negative_form
+msgid "Receipts"
+msgstr "إيصالات"
+
+#. module: sale_return_cycle
+#: model:ir.model.fields,field_description:sale_return_cycle.field_sale_order_line__qty_received
+msgid "Received Qty"
+msgstr "الكمية المستلمة"
+
+#. module: sale_return_cycle
+#: model:ir.model.fields,field_description:sale_return_cycle.field_sale_order__return_picking_ids
+msgid "Receptions"
+msgstr "الاستلامات"
+
+#. module: sale_return_cycle
+#: model:ir.model.fields,field_description:sale_return_cycle.field_sale_order_line__return_move_ids
+msgid "Reservation"
+msgstr "الحجز"
+
+#. module: sale_return_cycle
+#: model:ir.model.fields,field_description:sale_return_cycle.field_sale_order__return_picking_type_id
+msgid "Return To"
+msgstr "الرجوع الى"
+
+#. module: sale_return_cycle
+#: model:ir.model,name:sale_return_cycle.model_sale_order
+msgid "Sale Order"
+msgstr ""
+
+#. module: sale_return_cycle
+#: model:ir.model.fields,field_description:sale_return_cycle.field_stock_move__sale_return_line_id
+msgid "Sale Order Line"
+msgstr "خط طلب البيع"
+
+#. module: sale_return_cycle
+#: model_terms:ir.ui.view,arch_db:sale_return_cycle.view_order_product_graph
+#: model_terms:ir.ui.view,arch_db:sale_return_cycle.view_order_product_pivot
+#: model_terms:ir.ui.view,arch_db:sale_return_cycle.view_order_product_search
+msgid "Sales Analysis"
+msgstr "تحليل المبيعات"
+
+#. module: sale_return_cycle
+#: model:ir.model,name:sale_return_cycle.model_sale_report_return
+msgid "Sales Analysis Report"
+msgstr "تقرير المبيعات التحليلي"
+
+#. module: sale_return_cycle
+#: selection:sale.report.return,state:0
+msgid "Sales Done"
+msgstr "تم البيع"
+
+#. module: sale_return_cycle
+#: selection:sale.report.return,state:0
+msgid "Sales Order"
+msgstr "طلب المبيعات"
+
+#. module: sale_return_cycle
+#: model:ir.model,name:sale_return_cycle.model_sale_order_line
+msgid "Sales Order Line"
+msgstr "سطر أمر المبيعات"
+
+#. module: sale_return_cycle
+#: model_terms:ir.ui.view,arch_db:sale_return_cycle.view_order_product_search
+msgid "Sales Orders"
+msgstr "أوامر المبيعات"
+
+#. module: sale_return_cycle
+#: model:ir.ui.menu,name:sale_return_cycle.menu_report_product_all_return
+msgid "Sales Return"
+msgstr "عائد المبيعات"
+
+#. module: sale_return_cycle
+#: model:ir.actions.act_window,name:sale_return_cycle.action_order_report_all_return
+msgid "Sales Return Analysis"
+msgstr "تحليل عائد المبيعات"
+
+#. module: sale_return_cycle
+#: model:ir.model.fields,field_description:sale_return_cycle.field_sale_report_return__team_id
+#: model_terms:ir.ui.view,arch_db:sale_return_cycle.view_order_product_search
+msgid "Sales Team"
+msgstr "فريق المبيعات"
+
+#. module: sale_return_cycle
+#: model:ir.model.fields,field_description:sale_return_cycle.field_sale_report_return__user_id
+#: model_terms:ir.ui.view,arch_db:sale_return_cycle.view_order_product_search
+msgid "Salesperson"
+msgstr "موظف المبيعات"
+
+#. module: sale_return_cycle
+#: model:ir.model.fields,field_description:sale_return_cycle.field_sale_report_return__state
+#: model_terms:ir.ui.view,arch_db:sale_return_cycle.view_order_product_search
+msgid "Status"
+msgstr "الحالة"
+
+#. module: sale_return_cycle
+#: model:ir.model,name:sale_return_cycle.model_stock_move
+msgid "Stock Move"
+msgstr "حركة المخزون"
+
+#. module: sale_return_cycle
+#: model_terms:ir.ui.view,arch_db:sale_return_cycle.report_receipt_invoice_view_form
+msgid "Subtotal:"
+msgstr "الإجمالي الفرعي"
+
+#. module: sale_return_cycle
+#: model_terms:ir.ui.view,arch_db:sale_return_cycle.report_receipt_invoice_view_form
+msgid "Taxes:"
+msgstr "الضرائب:"
+
+#. module: sale_return_cycle
+#: code:addons/sale_return_cycle/models/sale_order.py:497
+#, python-format
+msgid "The quantities on your purchase order indicate less than billed. You should ask for a refund. "
+msgstr "تشير الكميات الموجودة في أمر الشراء إلى أقل من الفواتير. يجب أن تسأل لاسترداد."
+
+#. module: sale_return_cycle
+#: code:addons/sale_return_cycle/models/sale_order.py:92
+#: code:addons/sale_return_cycle/models/sale_order.py:98
+#: code:addons/sale_return_cycle/models/sale_order.py:174
+#: code:addons/sale_return_cycle/models/sale_order.py:180
+#, python-format
+msgid "There is no invoiceable line. If a product has a Delivered quantities invoicing policy, please make sure that a quantity has been delivered."
+msgstr "لا يوجد خط invoiceable. إذا كان المنتج لديه سياسة تسليم فواتير الكميات المسلمة ، فالرجاء التأكد من تسليم الكمية."
+
+#. module: sale_return_cycle
+#: model_terms:ir.actions.act_window,help:sale_return_cycle.action_order_report_all_return
+msgid ""
+"This report performs analysis on your quotations and sales orders. Analysis check your sales\n"
+"            revenues and sort it by different group criteria (salesman, partner, product, etc.) Use this report to\n"
+"            perform analysis on sales not having invoiced yet. If you want to analyse your turnover, you should use the\n"
+"            Invoice Analysis report in the Accounting application."
+msgstr ""
+"يقوم هذا التقرير بتحليل عروض الأسعار وأوامر المبيعات. تحليل تحقق مبيعاتك\n"
+"             الإيرادات وفرزها حسب معايير المجموعة المختلفة (بائع ، شريك ، منتج ، إلخ.) استخدم هذا التقرير إلى\n"
+"             إجراء تحليل على المبيعات عدم وجود فواتير بعد. إذا كنت ترغب في تحليل معدل دوران رأس المال الخاص بك ، يجب عليك استخدام\n"
+"             تقرير تحليل الفاتورة في تطبيق المحاسبة."
+
+#. module: sale_return_cycle
+#: model:ir.model.fields,help:sale_return_cycle.field_sale_order__return_picking_type_id
+msgid "This will determine operation type of Returned Products"
+msgstr "سيحدد هذا نوع تشغيل المنتجات المرتجعة"
+
+#. module: sale_return_cycle
+#: model:ir.model.fields,field_description:sale_return_cycle.field_sale_order_line__qty_to_invoice
+msgid "To Invoice Quantity"
+msgstr "لفاتورة الكمية"
+
+#. module: sale_return_cycle
+#: model:ir.model.fields,field_description:sale_return_cycle.field_sale_report_return__price_total
+msgid "Total"
+msgstr "الإجمالي"
+
+#. module: sale_return_cycle
+#: model_terms:ir.ui.view,arch_db:sale_return_cycle.report_receipt_invoice_view_form
+msgid "Total:"
+msgstr "الإجمالي:"
+
+#. module: sale_return_cycle
+#: code:addons/sale_return_cycle/models/sale_order.py:388
+#, python-format
+msgid "Unable to cancel purchase order %s as some receptions have already been done."
+msgstr ""
+
+#. module: sale_return_cycle
+#: model:ir.model.fields,field_description:sale_return_cycle.field_sale_report_return__product_uom
+msgid "Unit of Measure"
+msgstr "وحده القياس "
+
+#. module: sale_return_cycle
+#: model:ir.model.fields,field_description:sale_return_cycle.field_sale_report_return__untaxed_amount_invoiced
+msgid "Untaxed Amount Invoiced"
+msgstr "مبلغ غير خاضع للضريبة"
+
+#. module: sale_return_cycle
+#: model:ir.model.fields,field_description:sale_return_cycle.field_sale_report_return__untaxed_amount_to_invoice
+msgid "Untaxed Amount To Invoice"
+msgstr "مبلغ غير خاضع للضريبة على الفاتورة"
+
+#. module: sale_return_cycle
+#: model:ir.model.fields,field_description:sale_return_cycle.field_sale_report_return__price_subtotal
+msgid "Untaxed Total"
+msgstr "الإجمالي بدون الضرائب"
+
+#. module: sale_return_cycle
+#: model:ir.model.fields,field_description:sale_return_cycle.field_sale_report_return__volume
+msgid "Volume"
+msgstr "الحجم"
+
+#. module: sale_return_cycle
+#: code:addons/sale_return_cycle/models/sale_order.py:491
+#, python-format
+msgid ""
+"You cannot decrease the ordered quantity below the received quantity.\n"
+"Create a return first."
+msgstr ""
+"لا يمكنك تقليل الكمية المطلوبة دون الكمية المستلمة.\n"
+"إنشاء عائد أولاً."
+
+#. module: sale_return_cycle
+#: code:addons/sale_return_cycle/models/sale_order.py:272
+#, python-format
+msgid "You must set a Customer Location for this partner %s"
+msgstr ""
