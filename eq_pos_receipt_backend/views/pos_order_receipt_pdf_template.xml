@@ -303,25 +303,25 @@
                 <div class="page" style="font-size:10px;">
 
                     <br></br>
-<!--                    <div style="width:47%;float:left;white-space:nowrap">-->
-<!--                        <table style="line-height:5pt">-->
-<!--                            <tr>-->
-<!--                                <td>-->
-<!--                                    <b>Date:</b>-->
-<!--                                </td>-->
-<!--                                <td>-->
-<!--                                    <b>-->
-<!--                                        <span t-field="o.invoice_datetime"/>-->
-<!--                                    </b>-->
-<!--                                </td>-->
-<!--                                <td>-->
-<!--                                    <b>:التاريخ</b>-->
-<!--                                </td>-->
-<!--                            </tr>-->
-<!--                        </table>-->
+                    <div style="width:47%;float:left;white-space:nowrap">
+                        <table style="line-height:5pt">
+                            <tr>
+                                <td>
+                                    <b>Date:</b>
+                                </td>
+                                <td>
+                                    <b>
+                                        <span t-field="o.invoice_date"/>
+                                    </b>
+                                </td>
+                                <td>
+                                    <b>:التاريخ</b>
+                                </td>
+                            </tr>
+                        </table>
 
 
-<!--                    </div>-->
+                    </div>
                     <br/>
                     <!--                    <br/>-->
                     <div style="width:53%;float:left; white-space:nowrap">
