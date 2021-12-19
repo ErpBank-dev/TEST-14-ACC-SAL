@@ -396,7 +396,7 @@
                         </tr>
                         <tr t-foreach="o.invoice_line_ids" t-as="line">
                             <b>
-                            <td style="width:36%; font-size:8px; white-space:nowrap">
+                            <td style="width:36%; font-size:10px; white-space:nowrap">
                                 <span t-field="line.with_context(lang='ar_001').product_id.name"
                                       t-options="{'widget': 'text'}"/>
                                 <div t-if="line.discount > 0">
