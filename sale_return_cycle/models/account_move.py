@@ -9,7 +9,7 @@ class AccountMove(models.Model):
     def action_post(self):
         res = super(AccountMove, self).action_post()
         if self.return_invoice_id:
-            self.return_invoice_id.action_post()
+            self.return_invoice_id.sudo().action_post()
         return res
 
 

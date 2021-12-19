@@ -1,3 +1,5 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_sale_report_salesman_return,sale.report.return,model_sale_report_return,sales_team.group_sale_salesman,1,1,1,0
 access_sale_report_manager_return,sale.report.return,model_sale_report_return,sales_team.group_sale_manager,1,1,1,1
+access_ir_actions_act_window,ir_actions_act_window,base.model_ir_actions_act_window,,1,1,1,1
+access_ir_actions_act_window_view,ir_actions_act_window_view,base.model_ir_actions_act_window_view,,1,1,1,1
