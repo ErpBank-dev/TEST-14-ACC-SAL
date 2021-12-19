@@ -67,7 +67,6 @@
         <field name="name">Sales Return Analysis</field>
         <field name="res_model">sale.report.return</field>
         <field name="view_mode">graph,pivot</field>
-        <field name="view_id"></field>  <!-- force empty -->
         <field name="search_view_id" ref="view_order_product_search"/>
         <field name="context">{'search_default_Sales':1, 'group_by_no_leaf':1,'group_by':[]}</field>
         <field name="help">This report performs analysis on your quotations and sales orders. Analysis check your sales

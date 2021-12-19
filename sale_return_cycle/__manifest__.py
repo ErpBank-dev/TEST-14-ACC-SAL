@@ -1,13 +1,14 @@
 {
     'name': 'Sale Return',
-    'version': '14.0.1.0.0',
+    'version': '12.0.1.0.0',
     'category': 'Sale',
     'license': 'AGPL-3',
     'author': 'Mostafa Mohamed',
     'summary': 'Sale and Return in the same cycle',
     'depends': [
         'sale',
-        'account'
+        'account',
+        'base'
     ],
     'data': [
         'report/sale_report_return_view.xml',

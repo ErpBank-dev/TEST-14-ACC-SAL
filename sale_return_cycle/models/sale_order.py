@@ -61,7 +61,7 @@ class SaleOrder(models.Model):
                     continue
                 if group_key not in invoices:
                     inv_data = order.with_context(negative=True)._prepare_invoice()
-                    invoice = inv_obj.create(inv_data)
+                    invoice = inv_obj.sudo().create(inv_data)
                     references[invoice] = order
                     invoices[group_key] = invoice
                     invoices_origin[group_key] = [invoice.invoice_origin]
@@ -146,7 +146,7 @@ class SaleOrder(models.Model):
                     continue
                 if group_key not in invoices:
                     inv_data = order._prepare_invoice()
-                    invoice = inv_obj.create(inv_data)
+                    invoice = inv_obj.sudo().create(inv_data)
                     references[invoice] = order
                     invoices[group_key] = invoice
                     invoices_origin[group_key] = [invoice.invoice_origin]
@@ -352,6 +352,7 @@ class SaleOrder(models.Model):
             action['res_id'] = invoices.ids[0]
         else:
             action = {'type': 'ir.actions.act_window_close'}
+
         return action
 
 
