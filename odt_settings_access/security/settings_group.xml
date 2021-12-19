@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="configuration_group" model="res.groups">
+        <field name="name">Allow Configuration for Sale, Purchase, Stock, Accounts And Manufacturing</field>
+        <field name="category_id" ref="base.module_category_hidden"/>
+    </record>
+
+
+</odoo>
