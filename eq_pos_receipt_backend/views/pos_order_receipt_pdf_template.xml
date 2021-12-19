@@ -255,11 +255,11 @@
             <t t-call="web.basic_layout">
                 <t t-foreach="docs" t-as="o">
                     <t t-set="o" t-value="o.with_context(lang='en_US')"/>
-                    <div class="page" style="font-size:25px; ">
+                    <div class="page" style="font-size:30px; ">
                         <div style="text-align:center;">
                             <t t-if='o.company_id.logo'>
                                 <img t-att-src="'/logo.png?company=%s' % (o.company_id.id or 0)"
-                                     style="padding: 0px; margin: 0px; height: auto; max-width: 200px; max-height: 50px;"
+                                     style="padding: 0px; margin: 0px; height: auto; max-width: 200px; max-height: 100px;"
                                      t-att-alt="'%s' % o.company_id.name"/>
                             </t>
 
@@ -395,7 +395,8 @@
                             </th>
                         </tr>
                         <tr t-foreach="o.invoice_line_ids" t-as="line">
-                            <td style="width:36%; font-size:7px">
+                            <b>
+                            <td style="width:36%; font-size:10px; white-space:nowrap">
                                 <span t-field="line.with_context(lang='ar_001').product_id.name"
                                       t-options="{'widget': 'text'}"/>
                                 <div t-if="line.discount > 0">
@@ -407,6 +408,7 @@
                                     </t>
                                 </div>
                             </td>
+                            </b>
                             <!--                                                        <t t-if="not line.display_type" name="account_invoice_line_accountable">-->
                             <!--                                                                <td name="account_invoice_line_name">-->
                             <!--                                                                    <span t-field="line.product_id.name" t-options="{'widget': 'text'}"/>-->
@@ -415,18 +417,24 @@
                             <!--                                                                        <span t-field="line.with_context(lang='ar_001').product_id.name" t-options="{'widget': 'text'}"/>-->
                             <!--                                                                    </t>-->
                             <!--                                                                </td>-->
-                            <td class="text-right" style="width:17%; font-size:9px">
+                            <b>
+                            <td class="text-right" style="width:17%; font-size:10px">
                                 <span t-field="line.quantity"/>
                                 <span t-field="line.product_id.uom_id"/>
                             </td>
-                            <td class="text-right" style="width:17%; font-size:9px">
+                            </b>
+                            <b>
+                            <td class="text-right" style="width:17%; font-size:10px">
                                 <span t-field="line.price_unit"
                                       t-options="{'widget': 'monetary', 'display_currency': o.currency_id}"/>
                             </td>
-                            <td class="text-center" style="width:26%; font-size:9px">
+                            </b>
+                            <b>
+                            <td class="text-center" style="width:26%; font-size:10px">
                                 <span t-field="line.price_subtotal"
                                       t-options="{'widget': 'monetary', 'display_currency': o.currency_id}"/>
                             </td>
+                            </b>
                         </tr>
                     </table>
                     <table width="95%"
