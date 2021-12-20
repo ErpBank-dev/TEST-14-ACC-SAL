@@ -6,7 +6,7 @@
     'category': 'Tools',
     'version': '0.1',
 
-    'depends': ['sale', 'purchase', 'account', 'stock', 'mrp'],
+    'depends': ['sale', 'account'],
 
     'data': [
         'security/settings_group.xml',

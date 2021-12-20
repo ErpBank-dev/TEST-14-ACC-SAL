@@ -28,8 +28,8 @@
 		<field name="orientation">Portrait</field>
 		<field name="margin_top">0</field>
 		<field name="margin_bottom">1</field>
-		<field name="margin_left">4</field>
-		<field name="margin_right">4</field>
+		<field name="margin_left">6</field>
+		<field name="margin_right">2</field>
 		<field name="header_line" eval="False" />
 		<field name="header_spacing">50</field>
 		<field name="dpi">90</field>
