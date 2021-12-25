@@ -5,7 +5,7 @@ from odoo import api, fields, models
 class AccountMove(models.Model):
     _inherit = 'account.move'
 
-    return_invoice_id = fields.Many2one(comodel_name='account.move', string='Credit Note',copy=False)
+    return_invoice_id = fields.Many2one(comodel_name='account.move',string='Credit Note',copy=False)
     def action_post(self):
         res = super(AccountMove, self).action_post()
         if self.return_invoice_id:
