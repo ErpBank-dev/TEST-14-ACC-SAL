@@ -53,6 +53,6 @@ class AccountMove(models.Model):
                 if record.l10n_sa_delivery_date < record.invoice_date:
                     raise UserError(_('Delivery Date cannot be before Invoice Date'))
                 self.write({
-                    'l10n_sa_confirmation_datetime': fields.Datetime.now()
+                    'l10n_sa_confirmation_datetime': record.invoice_datetime
                 })
         return res

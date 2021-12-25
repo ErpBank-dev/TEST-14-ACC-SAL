@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record model="ir.ui.view" id="custom_company_form_view">
+        <field name="name">company.form.inherit</field>
+        <field name="model">res.company</field>
+        <field name="inherit_id" ref="base.view_company_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='general_info']" position="after">
+                <page string="Report Information" name="report_info">
+                    <group>
+                        <group>
+                            <field name="company_report_header" widget="image" class="float-left oe_avatar"/>
+                            <field name="company_report_footer" widget="image" class="float-left oe_avatar"/>
+
+                        </group>
+                        <group>
+                            <field name="main_commercial_register"/>
+                            <field name="sub_commercial_register"/>
+                            <field name="precious_metals_register_no"/>
+                            <field name="company_name_ar"/>
+
+                        </group>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+
+</odoo>

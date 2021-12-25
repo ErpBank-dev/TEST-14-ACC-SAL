@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record model="ir.ui.view" id="view_company_arabic_form">
+	    <field name="name">company.arabic.form.inherit</field>
+	    <field name="model">res.company</field>
+	    <field name="inherit_id" ref="base.view_company_form"/>
+	    <field name="arch" type="xml">
+	        <xpath expr="//page" position="after">
+           		<page string="Arabic Informations">
+                	<group colspan="2">
+                		<group colspan="1">
+    	            	 	<field name="name_arabic" placeholder="Company Name in Arabic" string="Company Name"/>
+                	 	</group>
+                	 	<group>
+	                    	<label for="street" string="Address"/>
+	                    	<div class="o_address_format">
+	                        	<field name="street_arabic" placeholder="Street in Arabic..." style="float:right;clear:both;" class="o_address_street"/>
+	                         	<field name="street2_arabic" placeholder="Street 2 in Arabic..." class="o_address_street"/>
+	                         	<field name="city_arabic" placeholder="City in Arabic" class="o_address_city"/>
+	                         	<field name="state_arabic" class="o_address_state" placeholder="State in Arabic" />
+	                         	<field name="zip_arabic" class="o_address_zip" placeholder="ZIP in Arabic" />
+	                         	<field name="country_arabic" class="o_address_country" placeholder="Country in Arabic" />
+	                   		</div>
+	                 	</group>
+	                </group>
+            	</page>
+            </xpath>
+            <xpath expr="//field[@name='vat']" position="after">
+            	<field name="tin_label"/>
+            </xpath>
+            <xpath expr="//field[@name='currency_id']" position="after">
+            	<field name="invoice_header_label"/>
+            	<field name="vat_accounting" widget="radio"/>
+				<field name="place_supply" attrs="{'invisible': [('vat_accounting', '!=', 'uae')]}"/>
+            </xpath>
+	    </field>
+	</record>
+	
+	<record model="ir.ui.view" id="view_state_arabic_form">
+	    <field name="name">state.arabic.form.inherit</field>
+	    <field name="model">res.country.state</field>
+	    <field name="inherit_id" ref="base.view_country_state_form"/>
+	    <field name="arch" type="xml">
+	        <xpath expr="//field[@name='name']" position="after">
+	        	<field name="arabic_name"/>
+            </xpath>
+	    </field>
+	</record>
+	
+	<record model="ir.ui.view" id="view_country_arabic_form">
+	    <field name="name">country.arabic.form.inherit</field>
+	    <field name="model">res.country</field>
+	    <field name="inherit_id" ref="base.view_country_form"/>
+	    <field name="arch" type="xml">
+	        <xpath expr="//field[@name='name']" position="after">
+	        	<field name="arabic_name"/>
+            </xpath>
+	    </field>
+	</record>
+	
+	<record model="ir.ui.view" id="view_partner_tin_form">
+	    <field name="name">res.partner.form.inherit</field>
+	    <field name="model">res.partner</field>
+	    <field name="inherit_id" ref="base.view_partner_form"/>
+	    <field name="arch" type="xml">
+	        <xpath expr="//field[@name='vat']" position="attributes">
+	        	<attribute name="string">VAT Reg. No</attribute>
+            </xpath>
+	    </field>
+	</record>
+	
+</odoo>

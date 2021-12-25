@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record model="ir.ui.view" id="view_vat_invoice_form">
+	    <field name="name">vat.invoice.form.inherit</field>
+	    <field name="model">account.move</field>
+	    <field name="inherit_id" ref="account.view_move_form"/>
+	    <field name="arch" type="xml">
+			 <xpath expr="//field[@name='invoice_date']" position="replace">
+				<div class="d-flex">
+					<field name="invoice_date" nolabel="1" options="{'datepicker': {'warn_future': true}}" attrs="{'invisible': [('move_type', 'not in', ('out_invoice', 'out_refund', 'in_invoice', 'in_refund', 'out_receipt', 'in_receipt'))]}"/>
+				   <span>&amp;nbsp;&amp;nbsp;</span>
+					<field name="invoice_datetime" nolabel="1"/>
+				</div>
+			</xpath>
+	        <xpath expr="//field[@name='invoice_payment_term_id']" position="after">
+	     		<field name="date_issue"/>
+	     		<field name="date_supply"/>   	
+	       	</xpath>
+			<xpath expr="//field[@name='payment_reference']" position="after">
+	     		<field name="po_ref"/>
+	     		<field name="po_date"/>
+	       	</xpath>
+
+	    </field>
+	</record>
+</odoo>
